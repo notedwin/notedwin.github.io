@@ -1,113 +1,84 @@
-html{
-	background-color: #333333;
-	font-family: Helvetica Neue LT Pro Md,sans-serif;
+* {
+	color: #000000;
+	background-color: #d0d1be;
+	font-family: 'Source Serif Pro','Georgia',serif;
+	margin: 0 auto;
 }
-body{
-	background-color:#ffffff;
-	font-family: 'Source Serif Pro', serif;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: auto;
-    margin-bottom:0;
-	max-width: 800px;
-	padding:2%;
-	height:100%;
-}
-h1{
-	font-family: Helvetica Neue LT Pro Md,sans-serif;
-	font-size:2em;
-	color: #333333;
-	margin-bottom:10px;
-	font-weight: bold;
-}
-.heading{
-	text-align: center;
-}
-h2{
-	font-family: Helvetica Neue LT Pro Md,sans-serif;
-	clear:left;
-	font-size:1.5em;
-	color:#333333;
-	margin-bottom:2px;
-	margin-top:5px;
-	font-weight: bold;
-}
-h3{
-	font-family: Helvetica Neue LT Pro Md,sans-serif;
-	font-size:1.25em;
-	columns: #666666;
-	margin-top:3px;
-	margin-bottom: 2px;
-	font-weight: bold;
-}
-nav {
-    background-color: #ffffff;
+html {
+	display: table;
+	font-size: 62.5%;
 }
 
-a {
-    font: size 1.5em;
-    color: black;
-	columns: #333333;
-	margin-top:5px;
-	margin-bottom: 2px;
+body {
+	font-size: 2rem;
+  	line-height: 1.6;
+  	font-weight: 400;
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
-ul > li {
+
+h1, h2, h3 {
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	font-weight: bold; 
+}
+
+h1{font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+  
+nav > ul > li > a {
+	color: #000000;
+	font-weight: bold; 
+	text-decoration: none;
+}
+
+nav > ul > li {
+	font-size: 2.5rem;
+	padding-left: 5%;
     display: inline-block;
     zoom:1;
-    *display:inline;
+	*display:inline;
 }
 
-@font-face {
-	font-family: 'Helvetica Neue LT Pro Md';
-	src: url('fonts/HelveticaNeueLTPro-Md.woff2') format('woff2'),
-		url('fonts/HelveticaNeueLTPro-Md.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+
+nav > ul > li > a:hover {
+	color: #ff0000;
+}
+
+i:hover {
+	color: #ff0000;
+}
+
+.row {
+	display: flex;
   }
   
-  @font-face {
-	font-family: 'Helvetica Neue LT Pro';
-	src: url('fonts/HelveticaNeueLTPro-MdCn.woff2') format('woff2'),
-		url('fonts/HelveticaNeueLTPro-MdCn.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+  .column {
+	flex: 50%;
   }
-  
-  @font-face {
-	font-family: 'Helvetica Neue LT Pro';
-	src: url('fonts/HelveticaNeueLTPro-MdCnO.woff2') format('woff2'),
-		url('fonts/HelveticaNeueLTPro-MdCnO.woff') format('woff');
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-  }
-  
-  @font-face {
-	font-family: 'Helvetica Neue LT Pro';
-	src: url('fonts/HelveticaNeueLTPro-MdEx.woff2') format('woff2'),
-		url('fonts/HelveticaNeueLTPro-MdEx.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-  }
-  
-  @font-face {
-	font-family: 'Helvetica Neue LT Pro';
-	src: url('fonts/HelveticaNeueLTPro-MdExO.woff2') format('woff2'),
-		url('fonts/HelveticaNeueLTPro-MdExO.woff') format('woff');
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-  }
-  
-  @font-face {
-	font-family: 'Helvetica Neue LT Pro';
-	src: url('fonts/HelveticaNeueLTPro-MdIt.woff2') format('woff2'),
-		url('fonts/HelveticaNeueLTPro-MdIt.woff') format('woff');
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-  }
+
+hr {
+	border-width: 0;
+	border-top: 1px solid #000000; 
+}
+
+.links {
+	font-size: 4rem;
+}
+
+.logo__cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1rem;
+    background: #fe5186;
+    margin-left: 5px;
+    border-radius: 1px;
+    animation: cursor 1s infinite;
+}
