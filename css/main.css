@@ -1,90 +1,164 @@
+:root {
+  /*colors*/
+  --background: #ffffff; /*#333333;/* #d0d1be;*/
+  --accents: #222222; /**/
+  --highlights: #ff0000;
+  --text: #000000;
+
+  --sansFont: "Inter";
+  --titleFont: "InterDisplay";
+  /*--monoFont: "IBM Plex Mono";*/
+
+  --fontSize: 16px;
+
+  --unit: calc(var(--fontSize) * 0.5);
+  --line-height: calc(var(--fontSize) * 1.5);
+  --baseline: var(--unit);
+
+  /* padding on the body block */
+  --body-padding-x: calc(var(--unit) * 8);
+  --body-padding-y: calc(var(--unit) * 8);
+
+  --displayScale: 1;
+  --pixel: 1px;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    --sansFont: "Inter var";
+    --titleFont: "InterDisplay var";
+  }
+}
+
+@media only screen and (min-resolution: 1.5dppx) {
+  :root {
+    --displayScale: 1.5;
+    --pixel: 0.75px;
+  }
+}
+@media only screen and (min-resolution: 2dppx) {
+  :root {
+    --displayScale: 2;
+    --pixel: 0.5px;
+  }
+}
+@media only screen and (min-resolution: 2.5dppx) {
+  :root {
+    --displayScale: 2.5;
+    --pixel: 0.4px;
+  }
+}
+@media only screen and (min-resolution: 3dppx) {
+  :root {
+    --displayScale: 3;
+    --pixel: 0.3333333333px;
+  }
+}
+@media only screen and (min-resolution: 3.5dppx) {
+  :root {
+    --displayScale: 4;
+    --pixel: 0.25px;
+  }
+}
+
 * {
-	color: #000000;
-	background-color: #d0d1be;
-	font-family: 'Source Serif Pro','Georgia',serif;
-	margin: 0 auto;
+  color: var(--text);
+  background-color: var(--background);
+  font-family: var(--sansFont), -system-ui, system-ui, sans-serif;
+  margin: 0 auto;
 }
 html {
-	display: table;
-	font-size: 62.5%;
+  display: table;
+  font-size: 62.5%;
 }
 
 body {
-	font-size: 2rem;
-  	line-height: 1.6;
-  	font-weight: 400;
-	position: relative;
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0 20px;
-	box-sizing: border-box;
+  font-size: var(--fontSize);
+  line-height: 1.6;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-
-h1, h2, h3 {
-	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	margin-top: 2rem;
-	margin-bottom: 0;
-	font-weight: bold; 
+h1,
+h2,
+h3 {
+  font-family: var(--titleFont), "Raleway", "HelveticaNeue", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
-h1{ font-size: 5rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+}
+h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
 
-nav > ul{
-	background-color: #000000;
+nav > ul {
+  background-color: var(--accents);
 }
 
 nav > ul > li > a {
-	background-color: #000000;
-	color: #d0d1be;
-	font-weight: bold; 
-	text-decoration: none;
+  background-color: var(--accents);
+  color: var(--background);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 nav > ul > li {
-	background-color: #000000;
-	font-size: 2.5rem;
-	padding-left: 5%;
-    display: inline-block;
+  background-color: var(--accents);
+  font-size: 2.5rem;
+  padding-left: 5%;
+  display: inline-block;
 }
-
 
 nav > ul > li > a:hover {
-	color: #ff0000;
+  color: var(--highlights);
 }
 
-.links, section > a > i, .links > h3 {
-	padding: 0.5% 5%;
-	background-color: #000000;
-	color: #d0d1be;
+.links,
+section > a > i,
+.links > h3 {
+  font-size: 4rem;
+  align-content: center;
+  padding: 0.5% 5%;
+  background-color: var(--background);
+  color: var(--accents);
 }
 
 i:hover {
-	color: #ff0000;
+  color: var(--highlights);
 }
 
 .row {
-	display: flex;
-  }
-  
-  .column {
-	flex: 50%;
-  }
+  display: flex;
+}
 
-
-.links {
-	font-size: 4rem;
+.column {
+  flex: 50%;
 }
 
 .logo__cursor {
-    display: inline-block;
-    width: 10px;
-    height: 1rem;
-    background: #fe5186;
-    margin-left: 5px;
-    border-radius: 1px;
-    animation: cursor 1s infinite;
+  display: inline-block;
+  width: 10px;
+  height: 1rem;
+  background: var(--highlights);
+  margin-left: 5px;
+  border-radius: 1px;
+  animation: cursor 1s infinite;
 }
