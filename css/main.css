@@ -29,15 +29,19 @@ h4 {
   margin: 0;
 }
 
+/*
+  fix styling to make resume a bit smaller.
+*/
+
 h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   margin-top: 1rem !important;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 h4 {
   font-size: 2rem;
@@ -46,7 +50,7 @@ h4 {
 body {
   font-size: var(--fontSize);
   width: 100%;
-  max-width: 850px;
+  max-width: 1000px;
 }
 
 .links,
@@ -94,7 +98,17 @@ p.location {
   float: right;
 }
 
+.inline h4 {
+  font-style: italic;
+}
+
 section.resume {
   background-color: #eeeeee;
   padding: 2.5rem;
+
+}
+
+.resume *{
+  margin: 0.25rem;
+
 }
