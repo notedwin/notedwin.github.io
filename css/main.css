@@ -53,13 +53,17 @@ body {
   max-width: 1000px;
 }
 
+.inline * {
+  display: inline-block;
+  margin: 0;
+}
+
 .links,
 section > a > i {
   font-size: 4rem;
   padding: 0 2rem;
   background-color: var(--background);
   color: var(--accents);
-  margin: 0;
 }
 
 nav > ul {
@@ -86,11 +90,6 @@ nav > ul > li > a:hover {
 
 section > a > i:hover {
   color: var(--highlights);
-}
-
-.inline * {
-  display: inline-block;
-  margin: 0;
 }
 
 p.date,
