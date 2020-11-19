@@ -3,11 +3,11 @@
   --background: #ffffff; /*#333333;/* #d0d1be;*/
   --accents: #222222; /**/
   --highlights: #ff0000;
-  --text: #000000;
+  --text: #222222;
 
   /*fonts*/
   --titleFont: "InterDisplay";
-  --serifFont: "Source Serif Pro";
+  --serifFont: "Lato";
   --fontSize: 2rem;
 }
 
@@ -26,88 +26,79 @@ h3,
 h4 {
   font-family: var(--titleFont), "Raleway", "HelveticaNeue", "Helvetica Neue";
   font-weight: bold;
-  margin: 0;
+  margin: auto 0;
 }
 
 /*
   fix styling to make resume a bit smaller.
 */
 
-h1 {
-  font-size: 5rem;
-  margin-top: 1rem !important;
-}
-h2 {
-  font-size: 2.8rem;
-}
-h3 {
-  font-size: 2.4rem;
-}
-h4 {
-  font-size: 2rem;
+h1 {font-size: 5rem;}
+h2 {font-size: 3.4rem;}
+h3 {font-size: 2.4rem;}
+h4 {font-size: 2rem;}
+
+header {
+  padding-bottom: .5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: .125rem solid;
 }
 
 body {
+  padding: 2rem 1.5rem;
   font-size: var(--fontSize);
-  width: 100%;
+  width: 80%;
   max-width: 1000px;
+  margin: auto;
 }
 
-.inline * {
-  display: inline-block;
-  margin: 0;
-}
-
-.links,
-section > a > i {
-  font-size: 4rem;
-  padding: 0 2rem;
-  background-color: var(--background);
-  color: var(--accents);
-}
-
-nav > ul {
-  background-color: var(--accents);
-}
-
-nav > ul > li > a {
-  background-color: var(--accents);
-  color: var(--background);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-nav > ul > li {
-  background-color: var(--accents);
-  font-size: 3rem;
-  padding: .5rem;
-  display: inline-block;
-}
-
-nav > ul > li > a:hover {
-  color: var(--highlights);
-}
-
-section > a > i:hover {
-  color: var(--highlights);
-}
-
-p.date,
-p.location {
-  float: right;
+.inline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .inline h4 {
   font-style: italic;
 }
 
-section.resume {
+.links,
+section > a > img {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  padding: 0 4rem;
+  background-color: var(--background);
+  color: var(--accents);
+}
+
+nav > ul > li > a {
+  color:var(--accents);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav > ul > li {
+  margin: auto;
+  font-size: 3rem;
+  padding: .5rem;
+  display: inline-block;
+}
+
+
+div.resume {
   background-color: #eeeeee;
   padding: 2.5rem;
 
 }
 
-.resume *{
-  margin: 0.25rem;
+.resume h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+.resume *{
+  margin: .55rem 0;
 }
