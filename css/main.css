@@ -15,7 +15,6 @@ html {
   font-family: var(--serifFont), -system-ui, system-ui, sans-serif;
   font-size: 62.5%;
   color: var(--text);
-  background-color: var(--background);
   display: table;
   margin: 0 auto;
 }
@@ -53,6 +52,7 @@ body {
   width: 80%;
   max-width: 1000px;
   margin: auto;
+  background-color: var(--background);
 }
 
 .inline {
@@ -76,6 +76,16 @@ nav > ul > li > a {
   font-weight: bold;
   text-decoration: none;
 }
+
+a:hover {
+  color: var(--highlights);
+}
+
+/* make img red on hover*/
+img:hover{
+  filter: invert(13%) sepia(89%) saturate(7382%) hue-rotate(0deg) brightness(110%) contrast(113%);
+}
+
 
 nav > ul > li {
   margin: auto;
